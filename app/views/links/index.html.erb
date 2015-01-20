@@ -1,23 +1,5 @@
 <p id="notice"><%= notice %></p>
 
 <% @links.each do |link| %>
-  <div class="link">
-    <h3 class="link-title"><%= link_to link.title, link.url %></h3>
-
-    <div class="link-description">
-      <%= link.description %>
-    </div>
-
-    <div class="link-meta">
-      <span class="link-date"><%= link.updated_at %></span>
-      &mdash;
-      <span class="link-permalink"><%= link.url %></span>
-    </div>
-
-    <ul class="link-tags">
-      <% link.tags.each do |tag| %>
-        <li><%= link_to tag.name, '#' %></li>
-      <% end %>
-    </ul>
-  </div>
+  <%= render partial: 'link', object: link %>
 <% end %>

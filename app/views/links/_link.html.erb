@@ -1,0 +1,26 @@
+<div class="link">
+  <h3 class="link-title"><%= link_to link.title, link.url %></h3>
+
+  <ul class="link-actions">
+    <li><%= link_to 'Edit', edit_link_path(link) %></li>
+    <li><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  </ul>
+
+  <div class="link-description">
+    <%= link.description %>
+  </div>
+
+  <div class="link-meta">
+    <span class="link-date"><%= link.updated_at %></span>
+    &blacksquare;
+    <%= link_to 'permalink', link_path(link) %>
+    &blacksquare;
+    <span class="link-permalink"><%= link.url %></span>
+  </div>
+
+  <ul class="link-tags">
+    <% link.tags.each do |tag| %>
+      <li><%= link_to tag.name, '#' %></li>
+    <% end %>
+  </ul>
+</div>
