@@ -8,6 +8,27 @@
 </head>
 <body>
 
+<div class="header">
+  <h1 class="header-title"><%= link_to 'Rhaarli', root_path %></h1>
+
+  <div class="header-description">
+    Exploring the web, one link at a time
+  </div>
+
+  <ul class="nav" role="nav">
+    <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'Settings', root_path %></li>
+    <li><%= link_to 'Add Link', root_path %></li>
+    <li><%= link_to 'RSS Feed', root_path %></li>
+    <li><%= link_to 'ATOM Feed', root_path %></li>
+    <li><%= link_to 'Tag Cloud', root_path %></li>
+  </ul>
+
+  <div class="header-counter">
+    Shaare your links... <%= pluralize @links_count, 'link' %>
+  </div>
+</div>
+
 <%= yield %>
 
 </body>

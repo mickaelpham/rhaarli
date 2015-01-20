@@ -25,6 +25,7 @@ class LinksController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @link.errors, status: :unprocessable_entity }
+      end
     end
   end
 
