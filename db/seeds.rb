@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Settings.create({
+  page_title:           'Exploring the web, one link at a time',
+  time_zone:            'Pacific Time (US & Canada)',
+  default_private_link: false
+})
