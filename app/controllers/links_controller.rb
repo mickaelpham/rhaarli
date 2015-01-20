@@ -3,6 +3,11 @@ class LinksController < ApplicationController
 
   def index
     @links = Link.all
+
+    respond_to do |format|
+      format.html
+      format.atom
+    end
   end
 
   def show

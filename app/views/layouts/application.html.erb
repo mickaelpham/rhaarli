@@ -20,7 +20,7 @@
     <li><%= link_to 'Settings', settings_path %></li>
     <li><%= link_to 'Add Link', new_link_path %></li>
     <li><%= link_to 'RSS Feed', root_path %></li>
-    <li><%= link_to 'ATOM Feed', root_path %></li>
+    <li><%= link_to 'ATOM Feed', links_path(format: :atom) %></li>
     <li><%= link_to 'Tag Cloud', root_path %></li>
   </ul>
 
