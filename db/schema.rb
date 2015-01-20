@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150119183548) do
+ActiveRecord::Schema.define(version: 20150120071538) do
 
   create_table "links", force: :cascade do |t|
     t.string   "url"
@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(version: 20150119183548) do
 
   add_index "links_tags", ["link_id"], name: "index_links_tags_on_link_id"
   add_index "links_tags", ["tag_id"], name: "index_links_tags_on_tag_id"
+
+  create_table "settings", force: :cascade do |t|
+    t.boolean  "default_private_link"
+    t.string   "page_title"
+    t.string   "time_zone"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
 
   create_table "tags", force: :cascade do |t|
     t.string   "name"
