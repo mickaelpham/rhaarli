@@ -1,18 +1,20 @@
 class SettingsController < ApplicationController
-  before_action :retrieve_settings
-
   def index
   end
 
   def update
+    respond_to do |format|
+      if @settings.update(settings_params)
+        format.html { redirect_to settings_path, notice: 'Settings successfully updated.' }
+        format.json { render :index, status: :ok }
+      else
+        format.html { render :index }
+        format.json { render json: @settings.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private
-
-  def retrieve_settings
-    # TODO change for the account ID
-    @settings = Settings.find(1)
-  end
 
   def settings_params
     params.require(:settings).permit(:default_private_link, :page_title, :time_zone)

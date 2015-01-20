@@ -1,2 +1,36 @@
-<h1>Settings#show</h1>
-<p>Find me in app/views/settings/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<%= form_for @settings, url: { action: 'update' } do |f| %>
+  <% if @settings.errors.any? %>
+    <div id="error_explanation">
+      <h3>
+        <%= pluralize(@settings.errors.count, 'error') %> prohibited the settings from being saved:
+      </h3>
+
+      <ul>
+        <% @settings.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :page_title %><br>
+    <%= f.text_field :page_title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :time_zone %><br>
+    <%= f.time_zone_select :time_zone, /US/ %>
+  </div>
+
+  <div class="field">
+    <%= f.label :default_private_link %><br>
+    <%= f.check_box :default_private_link %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
