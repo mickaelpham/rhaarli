@@ -11,15 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150120032108) do
-
-  create_table "configurations", force: :cascade do |t|
-    t.string   "page_title"
-    t.boolean  "default_private_link"
-    t.string   "time_zone"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-  end
+ActiveRecord::Schema.define(version: 20150119183548) do
 
   create_table "links", force: :cascade do |t|
     t.string   "url"

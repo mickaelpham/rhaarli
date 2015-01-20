@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   private
 
+  # Used in the site header
   def count_links
     @links_count = Link.count
   end
