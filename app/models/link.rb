@@ -12,7 +12,7 @@ class Link < ActiveRecord::Base
   after_initialize :init
 
   def init
-    # TODO put `private` default value in settings
-    self.private = false if self.private.nil?
+    # TODO put `is_private?` default value in settings
+    self.is_private = false if self.is_private.nil?
   end
 end

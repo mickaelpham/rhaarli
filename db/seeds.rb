@@ -11,3 +11,18 @@ Settings.create({
   time_zone:            'Pacific Time (US & Canada)',
   default_private_link: false
 })
+
+Link.create([
+  {
+    url:         'https://www.google.com',
+    title:       'Google',
+    description: 'This is a public link.',
+    is_private:  false
+  },
+  {
+    url:         'http://mickael.io',
+    title:       'My personal blog',
+    description: 'This is a private link',
+    is_private:  true
+  }
+])
