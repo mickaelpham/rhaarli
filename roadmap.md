@@ -34,8 +34,15 @@ Tools
 
 - [ ] Import/Export to Netscape Bookmarks format
 
-Backlog
--------
+
+Social
+------
+
+- [ ] Connect your Twitter/Facebook account to auto-post your public links
+
+
+Unclassified
+------------
 
 - [ ] Pagination for the link(s) page
 - [ ] Unit tests
